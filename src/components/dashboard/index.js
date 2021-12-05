@@ -20,7 +20,7 @@ function Dashboard() {
     >
       <h1 className="font-semibold text-3xl pb-2  text-gray-900 ">Dashboard</h1>
       {/* Grid Dashboard Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-rows-6 lg:grid-cols-4 xl:grid-cols-5 grid-rows-4 gap-4 h-5/6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-rows-5 lg:grid-cols-5 xl:grid-cols-5 grid-rows-8 gap-4 h-5/6 ">
         {kpis.map((kpi) => (
           <KpiCard name={kpi.name} value={kpi.value} />
         ))}
