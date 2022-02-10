@@ -19,7 +19,7 @@ const data = {
         return getGradient(ctx, chartArea);
       },
       borderColor: "#5C62F7",
-      fill: true,
+      fill: false,
       borderWidth: 4,
       cubicInterpolationMode: "monotone",
     },
@@ -27,17 +27,17 @@ const data = {
 };
 
 const options = {
+  plugins: {
+    legend: {
+      display: false,
+    },
+  },
   scales: {
     x: {
       display: false,
       grid: { display: false },
       title: {
         display: false,
-      },
-      ticks: {
-        major: {
-          enabled: true,
-        },
       },
     },
     y: {
@@ -48,11 +48,13 @@ const options = {
       },
     },
   },
+  maintainAspectRatio: false,
+  responsive: true,
 };
 
 function MinimalistLine() {
   return (
-    <div className="h-2/3 w-full">
+    <div className="container p-3 absolute bottom-0 right-0 w-1/2 h-full ">
       <Line data={data} options={options} />
     </div>
   );
