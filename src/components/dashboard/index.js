@@ -4,9 +4,12 @@ import KpiCard from "../kpiCard";
 import ListingCard from "../listingCard";
 import TimelineCard from "../timelineCard";
 
-function Dashboard() {
+function Dashboard(chartData) {
   const kpis = [
-    { name: "Rowing Sessions", value: 55 },
+    {
+      name: "Rowing Sessions",
+      value: "test",
+    },
     { name: "Meters Rowed", value: "745615m" },
     { name: "Power Delivered", value: "4546w" },
     { name: "Calories Spent", value: 45496 },
