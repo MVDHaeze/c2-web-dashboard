@@ -8,7 +8,6 @@ export default class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      kpis: this.props.kpis,
       charts: ["time", "watt"],
     };
   }
@@ -25,12 +24,12 @@ export default class Dashboard extends Component {
         </h1>
         {/* Grid Dashboard Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-rows-5 lg:grid-cols-5 xl:grid-cols-5 grid-rows-8 gap-4 h-5/6 ">
-          {this.state.kpis.map((kpi) => (
-            <KpiCard name={kpi.name} value={kpi.value} />
+          {Object.entries(this.props.kpis).map(([key, value]) => (
+            <KpiCard name={key} value={value} key={key} />
           ))}
           <ListingCard />
           {this.state.charts.map((chart) => (
-            <ChartCard name={chart} />
+            <ChartCard name={chart} key={chart} />
           ))}
           <TimelineCard />
         </div>
