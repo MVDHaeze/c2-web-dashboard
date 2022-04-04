@@ -4,7 +4,6 @@ export default function ListingCard() {
   return (
     <div className="card justify-start sm:col-span-2 lg:col-span-1 lg:row-span-6 xl:row-span-6 h-auto lg:order-first order-last w-full">
       <table className="table table-compact w-fit rounded-lg">
-        {" "}
         <thead>
           <tr>
             <th></th>

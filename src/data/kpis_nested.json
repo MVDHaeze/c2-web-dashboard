@@ -12,7 +12,8 @@
         },
         "Kpi": {
             "Name": "Rowing Sessions",
-            "Value": 105
+            "Value": 105,
+            "Description": "in total"
         }
     },
     "Meters": {
@@ -28,7 +29,8 @@
         },
         "Kpi": {
             "Name": "Meters Rowed",
-            "Value": 453504
+            "Value": "454",
+            "Description": "in kilometers"
         }
     },
     "Power": {
@@ -44,7 +46,8 @@
         },
         "Kpi": {
             "Name": "Average Power",
-            "Value": 154.7
+            "Value": "155",
+            "Description": "in watts"
         }
     },
     "Calories": {
@@ -60,7 +63,8 @@
         },
         "Kpi": {
             "Name": "Calories Spent",
-            "Value": 27521
+            "Value": "28",
+            "Description": "in kilocalories"
         }
     }
 }

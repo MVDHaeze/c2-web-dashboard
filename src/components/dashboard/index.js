@@ -23,15 +23,28 @@ export default class Dashboard extends Component {
           Dashboard
         </h1>
         {/* Grid Dashboard Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-rows-5 lg:grid-cols-5 xl:grid-cols-5 grid-rows-8 gap-4 h-5/6 ">
+        <div className="grid grid-cols-5 grid-rows-5">
+          {/* KPI Boxes */}
           {Object.entries(this.props.kpis).map(([key, value]) => (
-            <KpiCard data={value} key={key} name={key} />
+            <div>
+              <KpiCard data={value} key={key} name={key} />
+            </div>
           ))}
-          <ListingCard />
+          {/* Small Graphs */}
           {this.state.charts.map((chart) => (
-            <ChartCard name={chart} key={chart} />
+            <div className="row-span-2 col-span-2">
+              <ChartCard name={chart} key={chart} />
+            </div>
           ))}
-          <TimelineCard />
+          {/* Long Graph */}
+          <div className="row-span-2 col-span-4">
+            <TimelineCard />
+          </div>
+          {/* Table */}
+          <div className="row-span-5">
+            {" "}
+            <ListingCard />
+          </div>
         </div>
       </div>
     );

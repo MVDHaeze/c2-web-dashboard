@@ -57,7 +57,7 @@ function MinimalistLine({ graph }) {
     responsive: true,
   };
   return (
-    <div className="container p-3 absolute bottom-0 right-0 w-1/2 h-full ">
+    <div className="p-3 h-20 w-40">
       <Line data={data} options={options} />
     </div>
   );
